@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+main {
+    background-color: aqua;
+    width: 50%;
+    height: 48vh;
+    margin: 2rem auto;
+    align-items: center;
+    border-radius: 5px;
+}
+
+div.container h3 {
+    padding: 1rem;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.form-group{
+    padding: 0.5rem;
+}
+
+.form-group label {
+    text-align: left;
+    text-transform: uppercase;
+}
+.form-control{
+    display: block;
+    width: 100%;
+    height: 1.5rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    outline: 0;
+}
+
+.form-control:focus{
+    border: 1px solid blue;
+}
+
+form button.btn {
+    width: 25%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0.4rem;
+    float: right;
+    background-color: brown;
+    border: 1px solid brown;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+div.text-center{
+    display: flex;
+    margin: 1rem auto;
+    width: 75%;
+    justify-content: center;
+}
+
+div.text-center button {
+    padding: 0.6rem;
+    margin-left: 0.5rem;
+    background-color: brown;
+    border: 1px solid brown;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+table{
+    padding: 0.5rem;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid green;
+}
+
+table thead{
+    border: 1px solid green;
+    text-transform: uppercase;
+}
