@@ -12,9 +12,9 @@ class Negociacao {
         
         /* Através de this.nomeDaPropriedade, especificamos que a negociação terá: data, quantidade e valor, cada propriedade com seu valor padrão   */
 
-        this.data = data
-        this.quantidade = quantidade;
-        this.valor = valor; 
+        this._data = data
+        this._quantidade = quantidade;
+        this._valor = valor; 
     }
 
     /* Funções que definem um comportamento de uma classe são chamadas de métodos para alinhar o vocabulário com o paradigma da Orientação a Objetos. */
@@ -24,5 +24,17 @@ class Negociacao {
         /* as propriedades que contenham _ (underline) só poderão ser acessadas pelos próprios métodos da classe. Isto significa que, mesmo podendo imprimir a propriedade _quantidade com outro valor, não deveríamos mais poder acessá-la. O _ funciona como um aviso dizendo: "programador, você não pode alterar esta propriedade!". */
 
         return this._quantidade * this._valor;
+    }
+
+    getData(){
+        return this._data;
+    }
+
+    getQuantidade(){
+        return this._quantidade;
+    }
+
+    getValor(){
+        return this._valor;
     }
 }

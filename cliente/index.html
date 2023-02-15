@@ -64,10 +64,16 @@
    <!-- <script src="./js/index.js"></script> -->
     <script src="./app/domain/negociacao/negociacao.js"></script>
     <script>
+        /* a classe constructor() não pode ser invocada sem operador new . 
+        O operador new é bastante importante por ser o responsável pela 
+        inicialização da variável implícita this de cada instância criada, 
+        ou seja, de cada objeto criado. */
+
         let n1 = new Negociacao(new Date(), 5, 700);
         let volume = n1.obtemVolume();
-        console.log(volume)
-        console.log(n1);
+        console.log(n1.getQuantidade());
+        console.log(n1.getData());
+        console.log(n1.getValor());
     
     </script>
 </body>
