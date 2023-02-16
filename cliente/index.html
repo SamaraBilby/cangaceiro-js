@@ -68,14 +68,31 @@
         O operador new é bastante importante por ser o responsável pela 
         inicialização da variável implícita this de cada instância criada, 
         ou seja, de cada objeto criado. */
+        
+        /*Estamos criando uma propriedade getter de acesso à leitura. 
+        E mesmo sendo um método, precisamos acessá-lo como uma propriedade. 
+        Contudo, por debaixo dos panos, as propriedades que acessamos 
+        continuam sendo métodos.*/
+        
+        let dia =new Date()
+        let n1 = new Negociacao(dia, 5, 700);
+        let teste= n1.volume;
+        
+        dia.setDate(11)
+        
+        /* Outra característica de métodos criados com a sintaxe get 
+        é que, se tentarmos atribuir um novo valor à propriedade, 
+        ele será ignorado
+        */
 
-        let n1 = new Negociacao(new Date(), 5, 700);
-        let volume = n1.obtemVolume();
-        console.log(n1.getQuantidade());
-        console.log(n1.getData());
-        console.log(n1.getValor());
-    
+        n1.quantidade = 100;
+
+        console.log(n1.quantidade);
+        console.log(n1.data);
+        console.log(n1.valor);
+        console.log(teste);
     </script>
+
 </body>
 
 </html>
