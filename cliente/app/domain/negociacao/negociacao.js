@@ -12,9 +12,34 @@ class Negociacao {
         
         /* Através de this.nomeDaPropriedade, especificamos que a negociação terá: data, quantidade e valor, cada propriedade com seu valor padrão   */
 
+        /* 
         this._data = new Date(data.getTime());
         this._quantidade = quantidade;
         this._valor = valor;
+        */
+
+        /*
+        Podemos simplificar bastante esse processo de atribuição dos parâmetros 
+        recebidos pelo constructor nas propriedades da instância da classe com 
+        o método Object.assign()
+        */
+
+        /* 
+        O método Object.assign() é usado para copiar os valores de todas as propriedades próprias enumeráveis de um ou mais objetos de origem para um objeto destino. Ele retornará o objeto destino
+        */
+
+        Object.assign(
+            this, 
+            {
+                _data: new Date(data.getTime()),
+                _quantidade: quantidade,
+                _valor: valor
+            }
+        );
+
+        // usado para evitar mutabilidade dos valores.
+
+
         Object.freeze(this)
     }
 
