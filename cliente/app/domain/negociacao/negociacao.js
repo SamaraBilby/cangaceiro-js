@@ -8,7 +8,7 @@ class Negociacao {
 
     /* É a através da função constructor () que definimos as propriedades de uma classe */
 
-    constructor(data, quantidade, valor) {
+    constructor(_data, _quantidade, _valor) {
         
         /* Através de this.nomeDaPropriedade, especificamos que a negociação terá: data, quantidade e valor, cada propriedade com seu valor padrão   */
 
@@ -31,11 +31,11 @@ class Negociacao {
         Object.assign(
             this, 
             {
-                _data: new Date(data.getTime()),
-                _quantidade: quantidade,
-                _valor: valor
+                _quantidade,
+                _valor
             }
         );
+        this._data = new Date(_data.getTime());
 
         // usado para evitar mutabilidade dos valores.
 
