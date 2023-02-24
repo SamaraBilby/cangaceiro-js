@@ -13,18 +13,20 @@ class NegociacaoController{
 
          // cancelando a submissão do formulário
         event.preventDefault();
-        
-        // o spread operator (...), que permite tratar cada elemento do array como um elemento individualmente
-        let data = new Date(...this._inputData.value.split('-').map(function(item){
-            return item;})
-            );
-        
-            console.log(data)
 
+        let converter = new DateConverter();
+
+        let data = converter.paraData(this._inputData.value);
+        
         let negociacao = new Negociacao(
+            data,
             parseInt(this._inputQuantidade.value),
             parseFloat(this._inputValor.value)
-        )
+        );
+        
+        console.log(negociacao)
 
+        let diaMesAno = converter.paraTexto(negociacao.data);
+        console.log(diaMesAno);
     }
 }
