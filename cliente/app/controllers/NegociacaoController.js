@@ -13,18 +13,15 @@ class NegociacaoController{
 
          // cancelando a submissão do formulário
         event.preventDefault();
-
-        let converter = new DateConverter();
-
-        let data = converter.paraData(this._inputData.value);
         
+        let converter = new DateConverter();
+        let data = converter.paraData(this._inputData.value)
+
         let negociacao = new Negociacao(
             data,
             parseInt(this._inputQuantidade.value),
             parseFloat(this._inputValor.value)
         );
-        
-        console.log(negociacao)
 
         let diaMesAno = converter.paraTexto(negociacao.data);
         console.log(diaMesAno);
